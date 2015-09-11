@@ -1,0 +1,23 @@
+{
+    "name": "Work",
+    "slides": [
+        {
+            "image": "images/work/02.png",
+            "text": "<h2><span>Qualitative Research and Synthesis</span></h2><p><span>From ethnographic research methods - contextual inquires, interviews, observing behaviors, cultural probes, etc., create user profiles and goals. Framing user experience for the product. </span></p>"
+        },
+        {
+            "image": "images/work/01.png",
+            "text": "<h2><span>Site Map and Page Flow</span></h2><p><span>Analyze feasible data structure and information architecture. Organize and arrange by user goals and behaviors. Investigate how to translate complex data into comprehensive products.</span></p>"
+        },
+        {
+            "image": "images/work/03.png",
+            "text": "<h2><span>Wire frames and Prototypes in Various Fidelities</span></h2><p><span>Create wire frames and prototypes based on user scenarios. Usability tests.</span></p>"
+        },
+        {
+            "image": "images/work/04.png",
+            "text": "<h2><span>Quantitative Research and Web Analytics</span></h2><p><span>Find patterns and use cases from analytics data. Generate visualizations to communicate status and observe release impacts. Work in Omniture, Google Analytics and Quantcast.</span></p>"
+        }
+    ]
+}
+
+

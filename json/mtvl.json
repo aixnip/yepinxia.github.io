@@ -1,0 +1,50 @@
+{
+    "name": "TV Listings - Mobile Web",
+    "tag": "",
+    "time": "",
+    "slides": [
+        {
+            "image": "",
+            "text": "<h2>Background</h2><p>In the spring of 2012, about 10% of total traffic to TV listings was from mobile, but the website wasn’t optimized for mobile display. This project is to create a better user experience on mobile devices – phones, and tablets.</p>"
+        },
+        {
+            "image": "",
+            "text": "<h2>Research Plan</h2><p>The team understood user behaviors surrounding TV listings on fix web, including importance of each data element, common usage patterns, etc. I led the research in this project to find out whether there are any differences on user behaviors and scenarios when using mobile devices. Additionally, the research was on a shoestring. </p>"
+        },
+        {
+            "image": "images/mtvl/01.png",
+            "text": "<h2>Survey</h2><p>I recruited our user interview participants by putting out a survey on our website. The survey included about 12 behavioral questions to get our target user group, for example, “Do you check TV listings on your mobile devices”.  The survey was set up with logics in Qualtrix. See the logic chart below.</p>"
+        },
+        {
+            "image": "",
+            "text": "<h2>User Interviews</h2><p>When we collected about 30 users who match to the target user group, the screening process started. Each of the team members conducted at least one screener that is a 5-minute phone conversation to determine if the user was true to their survey results and if the user is articulate.  We finally narrowed down to 5 participants with whom we had full-hour conversations about their TV consumption and planning experience using mobile devices.</p>"
+        },
+        {
+            "image": "",
+            "text": "<h2>Research Conclusions</h2><p>One of our hypotheses was users wouldn’t plan their TV on mobile devices. The primary mobile scenario of TV listings would be when they are sitting in front of the television, which was proved in the research. A unique mobile scenario is checking TV listings on the way home. However, the decision-making data stays the same regardless of scenarios. Users are still looking for the same data elements on mobile.</p>"
+        },
+        {
+            "image": "images/mtvl/02.jpg",
+            "text": "<h2>Sketches</h2><p>The team discussed several ideas and sketched them out. Below is one of mine.</p>"
+        },
+        {
+            "image": "images/mtvl/03.png",
+            "text": "<h2>Interactions</h2><p>The team determined the IA and discussed the interactions. We assumed we could get the sliding interaction working.  Visual designers produced the interfaces.</p>"
+        },
+        {
+            "image": "images/mtvl/04.png",
+            "text": "<h2>Definition of Break Points</h2><p>This design will be delivered to all mobile devices, from phones to tablets. I discussed technical limitations with development team. Responsive design, which was fuzzy at the time, was impossible due to the back-end model. The final solution is adaptive. I researched and defined the breakpoints in our mobile web scenario. Below shows varied display, 1 to 3 hours of TV listings, according to different screen sizes.</p>"
+        },
+        {
+            "image": "images/mtvl/05.png",
+            "text": "<h2>Re-iteration</h2><p>Developers agreed on the slide interaction. However, at the time, sliding was still not a default browser interaction. The developer tried to accomplish that via customized JavaScript, which caused slowness, and thus the first implementation couldn’t meet required performance. So I went back to the mocks and added time navigation to the final design.</p>"
+        },
+       
+        {
+            "image": "",
+            "text": "<h2>Launch and Maintenance</h2><p>This product was launched in May 2012. Analytics showed a growth of unique visitors over time. However, this mobile display doesn’t have the equal amount of ads compared to fix web. The business team has been struggling to squeeze the value out of it.</p>"
+        }
+    ]
+}
+
+

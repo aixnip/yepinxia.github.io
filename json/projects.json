@@ -1,0 +1,46 @@
+{
+    "projects": [
+        {
+            "name": "Urban Forest",
+            "tag": "ixda 2013 shortlisted",
+            "time": "",
+            "image": "images/projects/urban-forest.png",
+            "url": "urban-forest.html"
+        },
+        {
+            "name": "What's On App",
+            "tag": "interaction design",
+            "time": "2013",
+            "image": "images/projects/ipad-app.png",
+            "url": "ipad-app.html"
+        },
+        {
+            "name": "TV Listings - Mobile Web",
+            "tag": "research & design",
+            "time": "2012",
+            "image": "images/projects/mtvl.png",
+            "url": "mtvl.html"
+        },
+        {
+            "name": "Trax - Travel App",
+            "tag": "interaction, research",
+            "time": "2010",
+            "image": "images/projects/trax.png",
+            "url": "trax.html"
+        },
+        {
+            "name": "Virtual Currency",
+            "tag": "research, communication",
+            "time": "2011",
+            "image": "images/projects/virtual-currency.png",
+            "url": "virtual-currency.html"
+        },
+        {
+            "name": "Visualizations",
+            "tag": "communication",
+            "time": "2011",
+            "image": "images/projects/visualizations.png",
+            "url": "visualizations.html"
+        }
+    ]
+}

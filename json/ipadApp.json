@@ -1,0 +1,41 @@
+{
+    "name": "What's On iPad App",
+    "tag": "",
+    "time": "",
+    "slides": [
+        {
+            "image": "",
+            "text": "<h2>Background - The Opportunity</h2><p>Market trends indicate that TV enthusiasts are quickly migrating to mobile devices for TV listings information. What kind of product will capitalize on this opportunity?</p>"
+        },
+        {
+            "image": "",
+            "text": "<h2>Research</h2><p>Quantitative and qualitative research as well as competitive reviews point towards the tablet as being the best form factor to solve this problem. The decision is to build the product as an iOS app in order to take advantage of the additional speed and functionality an app architecture offers.</p><p>The team had previously executed research that documented the top user goals when employing a TV listings product. Two additional in-home contextual inquiries were executed to confirm theories of customer behavior.</p>"
+        },
+        {
+            "image": "",
+            "text": "<h2>User Scenarios</h2><p>We wrote user scenarios for 3 different user profiles. Below is one of them.</p><h3>Missed an Episode</h3><p>Angelo uses the Zap2it iPad App to find out that Eureka has a new episode tonight. He canâ€™t remember whether he watched last weekâ€™s episode of Eureka. So he navigates to decision making data for the most recent episodes and confirms he did miss it. Angelo doesnâ€™t want to watch tonightâ€™s new episode before he has watched the last one. Zap2it tells him the last episode is available on Syfy. Angelo watches it on his tablet before the new episode airs on TV.</p>"
+        },
+        {
+            "image": "images/ipadApp/01.png",
+            "text": "<h2>Site Map / IA</h2><p>We analyzed the current IA on <a href='http://zap2it.com'>zap2it.com</a>. The updated IA should accurately reflect Zap2it's content and data structures, but be tailored to the iPad's guidelines and conventions.</p>"
+        },
+        {
+            "image": "images/ipadApp/02.png",
+            "text": "<h2>Interactions</h2><p>Based on the user scenarios and the IA, we produced wire frames. Below illustrates the interaction when a user taps on a TV listings grid cell. The data displayed in the sliding door appears in the exact prioritized order to support the user's decisions.</p>"
+        },
+        {
+            "image": "images/ipadApp/03.png",
+            "text": "<br>"
+        },
+        {
+            "image": "",
+            "text": "<h2>Visual and Development</h2><p>The wire frames were passed to the visual designer and eventually the development team. The first release launched in September 2013.</p>"
+        },
+        {
+            "image": "images/ipadApp/04.png",
+            "text": "<h2>Final Product</h2>"
+        }
+    ]
+}
+
+

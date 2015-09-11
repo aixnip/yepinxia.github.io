@@ -1,0 +1,25 @@
+{
+    "name": "this.website",
+    "tag": "",
+    "time": "",
+    "slides": [
+        {
+            "image": "",
+            "text": "<h2>Tools</h2><p>This website doesn't use any 3rd party frameworks except for jQuery. I used Dreamweaver pretty much as a text editor to code this site. Contents are populated with JSON objects. Feel free to view source / inspect element anytime!<br></p>"
+        },
+        {
+            "image": "images/website/02.png",
+            "text": "<h2>Responsive Design</h2><p>No excuse to not support different devices. I researched some responsive design framework, and learned from existing solutions. This is the project list page layout in different page widths / devices.</p>"
+        },
+        {
+            "image": "images/website/03.png",
+            "text": ""
+        },
+        {
+            "image": "images/website/04.png",
+            "text": "<h2>Look n' Feel</h2><p></p>"
+        }
+    ]
+}
+
+
