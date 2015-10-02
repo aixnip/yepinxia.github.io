@@ -1,4 +1,6 @@
-var jqxhr = $.getJSON( "json/mtvl.json", function(json) {
+var filename = "json/" + pagename + ".json";
+
+var jqxhr = $.getJSON( filename, function(json) {
   console.log( "success" ); 
   var name = json.name;
   var tag = json.tag;
@@ -12,7 +14,11 @@ var jqxhr = $.getJSON( "json/mtvl.json", function(json) {
 		  }else{
 		html = '<li id="slide-' + i + '"><div class="text">' + slides[i].text + '</div><img src=' + slides[i].image + '></li>';
 		}
-	$("#work-p-slides").append(html);
+		if ($("#work-p-slides").length){
+			$("#work-p-slides").append(html);
+		}else{
+			$("#p-slides").append(html);
+		}
 	};
 
 	$("#name").html(name);

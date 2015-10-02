@@ -123,7 +123,7 @@ body {margin: 0 auto;}
 #p-list li img {width: 100%;}
 
 #index-list li { display: block; float: left;}
-#index-list {margin: 0 0 50px 0;}
+#index-list {margin: 0 0 50px 0;min-height:250px;}
 .p-name {font-weight: bold;}
 .p-tag {font-size: 0.7em; }
 
@@ -156,7 +156,7 @@ body {margin: 0 auto;}
 	
 	#projects {margin: 30px 30px;}
 	#p-list li {width: 200px; margin: 20px 40px;}
-	#index-list li {width: 400px; margin:0 40px 0 0;}
+	#index-list li {width: 300px; margin:0 30px 0 0;}
 	#work-slides li {display: block; margin： 0 auto; height: 600px; width: 1200px;}
 
 	}
@@ -171,7 +171,7 @@ body {margin: 0 auto;}
 	
 	#projects {margin: 0;}	
 	#p-list li {width: 20%;margin: 1% 2%;}
-	#index-list li {width: 40%;margin: 1% 2%;}
+	#index-list li {width: 30%;margin: 1% 1%;}
 	li img {width: 100%;}
 	#work-slides li {display: block; clear: both; margin： 0 auto; height: 600px; width: 100%;}
 	/*#work-p-slides img{height:500px; width:auto; }*/
