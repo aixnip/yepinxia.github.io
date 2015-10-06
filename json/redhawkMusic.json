@@ -5,7 +5,11 @@
     "slides": [
         {
 			"image": "",
+<<<<<<< HEAD
 			            "text": "<h2>Project Requirements</h2><p>This is a class project at IIT. We had the opportunity to define our own product. The instructor's requirements is to build an e-commerce web application with at least user login and shopping cart. So our team had decided to build an online music / video store.</p>"
+=======
+			            "text": "<h2>Project Requirements</h2><p>This is a class project at IIT. We had the opportunity to define our own product. The instructor's requirements is to build a e-commerce web application with at least user login and shopping cart. So our team had decided to build an online music / video store.</p>"
+>>>>>>> master
 			        },
 			        {
 			            "image": "",
