@@ -1,6 +1,13 @@
 {
     "projects": [
         {
+            "name": "Redhawk Music Store",
+            "tag": "JSP, CSS, Servlet, web dev",
+            "time": "2014",
+            "image": "images/projects/redhawk-music.png",
+            "url": "redhawk-music.html"
+        },
+        {
             "name": "Urban Forest",
             "tag": "ixda 2013 shortlisted",
             "time": "",
