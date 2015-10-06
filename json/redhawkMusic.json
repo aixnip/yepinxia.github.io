@@ -5,52 +5,48 @@
     "slides": [
         {
 			"image": "",
-<<<<<<< HEAD
-			            "text": "<h2>Project Requirements</h2><p>This is a class project at IIT. We had the opportunity to define our own product. The instructor's requirements is to build an e-commerce web application with at least user login and shopping cart. So our team had decided to build an online music / video store.</p>"
-=======
-			            "text": "<h2>Project Requirements</h2><p>This is a class project at IIT. We had the opportunity to define our own product. The instructor's requirements is to build a e-commerce web application with at least user login and shopping cart. So our team had decided to build an online music / video store.</p>"
->>>>>>> master
-			        },
-			        {
-			            "image": "",
-			            "text": "<h2>Team</h2><p>Our team members include myself, Jorge Garcia, and Lei Ling. My role in the team, besides the coding part, is also the captain to communicate with instructor and TA, to make submissions, and also to make sure we are on schedule to deliver the final product.</p>"
-			        },
-			        {
-			            "image": "",
-			            "text": "<h2>Approach</h2><p>The majority of this product is written in JSP corresponding with Java (for object definitions), such as the homepage, music detail page, category page. Some small pieces are straight HTML pages, like login page. The auto-completion feature for the search bar is achieved with Servlet and JavaScript. All catalog data are static feed from a serialized file due to our limited time frame.</p>"
-			        },
-			        {
-			            "image": "images/redhawksMusic/UML-small.png",
-			            "text": "<h2>UML</h2><p>The entire UML diagram is huge. It contains three major parts, user, transaction, and product. Lei is responsible for user and transaction. Jorge and I cooperated on product. Here I only presents a central part of product. The Object to transact is called Item which has three sub-classes, Album, Song, and Video. Album is also consist of Song.</p>"
-			        },
-			        {
-			            "image": "",
-			            "text": "<h2>Code Highlights</h2><p>Below are some highlights of my part.</p>"
-			        },
-			        {
-			            "image": "",
-			            "text": "<h2>item.jsp</h2><p>This is the page for an item detail, could be an album, a song, or a music video, depending on the parameter in HTTP request. A single JSP file handles request of different types. The complete source code is <a href='https://github.com/yepinxia/redhawk-music/blob/master/jsp/item.jsp'>here<a>.</p>"
-			        },
-			        {
-			            "image": "",
-			            "text": "<h2>Auto-Complete</h2><p>The catalog of our products is available in a HashMap located in the data source. This servlet retrieve the catalog HashMap and feed the matched product to JavaScript in XML. The complete code - <a href='https://github.com/yepinxia/redhawk-music/blob/master/WEB-INF/classes/AutoComplete.java'> AutoComplete.java</a>.</p>"
-			        },
-			        {
-			            "image": "images/redhawksMusic/index_jsp.png",
-			            "text": "<h2>Styling & CSS</h2><p>The website is a partial fluid layout due to our tight time frame, but the overall look is neat. Below are some screenshots starting the homepage. </p>"
-			        },
-			        {
-			            "image": "images/redhawksMusic/item_jsp_album.png",
-			            "text": "<p>Album page - item.jsp</p>"
-			        },
-			        {
-			            "image": "images/redhawksMusic/auto-completion.png",
-			            "text": "<p>Auto-completion</p>"
-			        },
-			        {
-			            "image": "images/redhawksMusic/music-list_jsp.png",
-			            "text": "<p>Music List - all the past purchases.</p>"
-			        }
+			"text": "<h2>Project Requirements</h2><p>This is a class project at IIT. We had the opportunity to define our own product. The instructor's requirements is to build an e-commerce web application with at least user login and shopping cart. So our team had decided to build an online music / video store.</p>"
+		},
+		{
+			"image": "",
+			"text": "<h2>Team</h2><p>Our team members include myself, Jorge Garcia, and Lei Ling. My role in the team, besides the coding part, is also the captain to communicate with instructor and TA, to make submissions, and also to make sure we are on schedule to deliver the final product.</p>"
+        },
+        {
+            "image": "",
+            "text": "<h2>Approach</h2><p>The majority of this product is written in JSP corresponding with Java (for object definitions), such as the homepage, music detail page, category page. Some small pieces are straight HTML pages, like login page. The auto-completion feature for the search bar is achieved with Servlet and JavaScript. All catalog data are static feed from a serialized file due to our limited time frame.</p>"
+        },
+        {
+			"image": "images/redhawksMusic/UML-small.png",
+            "text": "<h2>UML</h2><p>The entire UML diagram is huge. It contains three major parts, user, transaction, and product. Lei is responsible for user and transaction. Jorge and I cooperated on product. Here I only presents a central part of product. The Object to transact is called Item which has three sub-classes, Album, Song, and Video. Album is also consist of Song.</p>"
+        },
+        {
+	        "image": "",
+	        "text": "<h2>Code Highlights</h2><p>Below are some highlights of my part.</p>"
+        },
+        {
+	        "image": "",
+	        "text": "<h2>item.jsp</h2><p>This is the page for an item detail, could be an album, a song, or a music video, depending on the parameter in HTTP request. A single JSP file handles request of different types. The complete source code is <a href='https://github.com/yepinxia/redhawk-music/blob/master/jsp/item.jsp'>here<a>.</p>"
+        },
+        {
+            "image": "",
+            "text": "<h2>Auto-Complete</h2><p>The catalog of our products is available in a HashMap located in the data source. This servlet retrieve the catalog HashMap and feed the matched product to JavaScript in XML. The complete code - <a href='https://github.com/yepinxia/redhawk-music/blob/master/WEB-INF/classes/AutoComplete.java'> AutoComplete.java</a>.</p>"
+        },
+        {
+            "image": "images/redhawksMusic/index_jsp.png",
+            "text": "<h2>Styling & CSS</h2><p>The website is a partial fluid layout due to our tight time frame, but the overall look is neat. Below are some screenshots starting the homepage. </p>"
+        },
+	    {
+	        "image": "images/redhawksMusic/item_jsp_album.png",
+            "text": "<p>Album page - item.jsp</p>"
+        },
+        {
+            "image": "images/redhawksMusic/auto-completion.png",
+            "text": "<p>Auto-completion</p>"
+        },
+        {
+            "image": "images/redhawksMusic/music-list_jsp.png",
+            "text": "<p>Music List - all the past purchases.</p>"
+        }
 			    ]
             
 }
