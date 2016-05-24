@@ -1,6 +1,13 @@
 {
     "projects": [
         {
+            "name": "Text Mining Experiments",
+            "tag": "Data Mining, R",
+            "time": "2016",
+            "image": "images/projects/textMining1.png",
+            "url": "text-mining-experiments.html"
+        },
+        {
             "name": "Redhawk Music Store",
             "tag": "JSP, CSS, Servlet, web dev",
             "time": "2014",
