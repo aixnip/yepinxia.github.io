@@ -23,7 +23,8 @@
 		content: none; }
 	table {
 		border-collapse: collapse;
-		border-spacing: 0; }
+		border-spacing: 0; 
+	}
 
 /* #Basic Styles
 ================================================== */
@@ -60,7 +61,7 @@
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
 	h1 { font-size: 46px; line-height: 50px; margin-bottom: 14px;}
 	h2 { font-size: 28px; line-height: 34px; margin-bottom: 8px; position:relative; right: 2px; }
-	h3 { font-size: 21px; line-height: 28px; text-align:center;}
+	h3 { font-size: 21px; line-height: 28px; }
 	p { font-weight: 400;color: #181818; margin: 0 0 20px 0; color: #222; line-height: 1.5;}
 	p img { margin: 0; }
 	p.lead { font-size: 21px; line-height: 27px; color: #777;  }
@@ -68,6 +69,8 @@
 	em { font-style: italic; text-align:right; padding: 0 0 0 20px;}
 	strong { font-weight: 700; color: #222; }
 	small { font-size: 80%; }
+	
+	table thead{font-weight: 700;}
 
 /* #Links
 ================================================== */
@@ -90,6 +93,9 @@ a:hover .p-name {background-color: #f7d94c;}
 #work-slides p span {background-color:#bdc0ba;},
 
 #menu ul li .onselect {color:#99A6AD;}
+
+
+
 
 /* # Layout
 =================================================  */
@@ -140,6 +146,8 @@ body {margin: 0 auto;}
 #work-p-slides {padding: 40px 0 0 40px;}
 #work-p-slides li {min-height: 200px; display: block; clear: both;}
 #work-p-slides li div{padding: 20px 0 0 0;}
+#work-p-slides table th, td{border:1px solid #ccc; padding:1%;}
+#work-p-slides table{ width:100%; margin: 0 0 20px; }
 
 .back-to-top {width: 50px; height: 50px; position: fixed; top: 600px; right:10px; background-image: url(../images/assets/to-top.png); display: none; z-index: 2;}
 

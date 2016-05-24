@@ -1,5 +1,5 @@
 var filename = "json/" + pagename + ".json";
-
+console.log( filename ); 
 var jqxhr = $.getJSON( filename, function(json) {
   console.log( "success" ); 
   var name = json.name;
