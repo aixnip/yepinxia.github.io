@@ -71,6 +71,7 @@
 	small { font-size: 80%; }
 	
 	table thead{font-weight: 700;}
+	code{font-family:'Consolas','Courier New', mono-type;}
 
 /* #Links
 ================================================== */
@@ -133,7 +134,8 @@ body {margin: 0 auto;}
 .p-name {font-weight: bold;}
 .p-tag {font-size: 0.7em; }
 
-#p-slides li { display: block; margin: 0 auto;}
+
+#p-slides ul li { display: block; margin: 0 auto;}
 #p-slides img {width: 100%;}
 #p-slides .text {display: inline;}
 
@@ -145,6 +147,7 @@ body {margin: 0 auto;}
 #work-p-slides img{max-height:500px; width:auto; }
 #work-p-slides {padding: 40px 0 0 40px;}
 #work-p-slides li {min-height: 200px; display: block; clear: both;}
+#work-p-slides li ul li {min-height: 0; }
 #work-p-slides li div{padding: 20px 0 0 0;}
 #work-p-slides table th, td{border:1px solid #ccc; padding:1%;}
 #work-p-slides table{ width:100%; margin: 0 0 20px; }
