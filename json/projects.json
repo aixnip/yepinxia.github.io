@@ -1,6 +1,13 @@
 {
     "projects": [
         {
+            "name": "Tera-sort on AWS",
+            "tag": "Spark, Hadoop, Java, Scala, AWS",
+            "time": "2016",
+            "image": "images/projects/terasort.png",
+            "url": "terasort.html"
+        },
+		{
             "name": "Text Mining Experiments",
             "tag": "Data Mining, R",
             "time": "2016",

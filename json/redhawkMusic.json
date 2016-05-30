@@ -46,6 +46,10 @@
         {
             "image": "images/redhawksMusic/music-list_jsp.png",
             "text": "<p>Music List - all the past purchases.</p>"
+        },
+        {
+            "image": "",
+            "text": "<h2>Source code</h2><p>The complete source code is available at github, <a href='https://github.com/yepinxia/redhawk-music'>https://github.com/yepinxia/redhawk-music</a>.</p>"
         }
 			    ]
             
