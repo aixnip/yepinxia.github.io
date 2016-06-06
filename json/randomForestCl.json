@@ -1,0 +1,98 @@
+{
+    "name": "Random Forest Classifier",
+    "tag": "data mining, R", 
+    "time": "Apr 2016",
+    "slides": [
+        {
+            "image": "",
+            "text": "<h2>Project Requirements</h2><p>This is an individual class project for advanced data mining course at IIT. The project explores tree classifiers with two dataset - Titanic survival data, and cell phone company churn data.</p>"
+        },
+        {
+            "image": "images/randomForestCl/01.png",
+            "text": "<h2>Titanic Dataset</h2><p>The dataset has four attributes - Age, Sex, Class, and Survived. All the other variables are related to Survived. Female and child has a higher survival rate. Additionally, the higher a person’s class is, the more likely he or she survived.</p>"
+        },
+        {
+            "image": "",
+            "text": "<h2>Classification Tree</h2><pre>n= 2201<br>node), split, n, loss, yval, (yprob)<br>      * denotes terminal node<br><br> 1) root 2201 711 No (0.6769650 0.3230350)  <br>   2) Sex=Male 1731 367 No (0.7879838 0.2120162)  <br>     4) Age=Adult 1667 338 No (0.7972406 0.2027594) *<br>     5) Age=Child 64  29 No (0.5468750 0.4531250)  <br>      10) Class=3rd 48  13 No (0.7291667 0.2708333) *<br>      11) Class=1st,2nd 16   0 Yes (0.0000000 1.0000000) *<br>   3) Sex=Female 470 126 Yes (0.2680851 0.7319149)  <br>     6) Class=3rd 196  90 No (0.5408163 0.4591837) *<br>     7) Class=1st,2nd,Crew 274  20 Yes (0.0729927 0.9270073) *</pre><br><p>See above the tree output. It shows the first split is on Sex. The male branch then splits on Age. The prediction of an adult male is not survived. The child male branch then divides on the class; the 3rd class male child is not likely to survive where the 1st and 2nd class male child will survive. The female branch only has one more level that is on Class. So the tree tells a 3rd class female is not likely to survive regardless of her age, while the other classes - 1st, 2nd, Crew - will survive.</p>"
+        },
+        {
+            "image": "images/randomForestCl/02.png",
+            "text": "<p>It’s actually sad that this tree predicts the 3rd class people won’t survive no matter what. One important insight is to buy higher class ticket when traveling, which may save lives. </p><p>The number of observations at each leaf are fine. The observation rate is low for Female 3rd class, though. However, the overall observation rate is fine.</p>"
+		},
+        {
+            "image": "",
+            "text": "<h2>Predictions</h2><table><thead><tr><th></th><th>False</th><th>True</th></tr></thead><tbody><tr><td>1st class/child/female</td><td>0.0729927</td><td>0.9270073</td></tr><tr><td>2nd class/adult/male</td><td>0.7972406</td><td>0.2027594</td></tr><tr><td>crew/adult/male</td><td>0.7972406</td><td>0.2027594</td></tr></tbody></table><p>See example predictions results above. The prediction is actually consist of ratios for different possibilities.</p><p>No Prediction Correction</p><table><thead><tr><th>False</th><th>True</th></tr></thead><tbody><tr><td>20</td><td>1470</td></tr></tbody></table><p>Yes Prediction Correction</p><table><thead><tr><th>False</th><th>True</th></tr></thead><tbody><tr><td>441</td><td>270</td></tr></tbody></table><p>The tree actually performs much better on no predictions. The correct rate on yes is 44.8%, while on no is 98.6%. So the tree is more intent to vote for not survived. The overall trend is correct, though. Most of people on Titanic didn't survive.</p>"
+		},
+        {
+            "image": "images/randomForestCl/03.png",
+            "text": "<h2>Churn Dataset</h2><p>The dataset has 17 attributes - churn, area, vmail, vmail.msgs, day.mins, day.calls, day.charge, eve.mins, eve.calls, eve.charge, night.mins, night.calls, night.charge, intl.mins, intl.calls, intl.charge, svc.calls. Some of them are not range data, such as vmail, area. See the histograms for all the range attributes below.</p>"
+        },
+        {
+            "image": "",
+            "text": "<p>The dataset also contains some categorical data, listed below.</p><p>churn</p><table><thead><tr><th>No</th><th>Yes</th></tr></thead><tbody><tr><td>2850</td><td>483</td></tr></tbody></table><p>vmail</p><table><thead><tr><th>No</th><th>Yes</th></tr></thead><tbody><tr><td>2411</td><td>922</td></tr></tbody></table>"
+        },
+        {
+            "image": "images/randomForestCl/04.png",
+            "text": "<h3>Relationships Between Quantitative Variables </h3><p>See below the splom plots I tried - churn vs charge, churn vs mins, and also churn vs the variables I think are important. </p><p>First, it’s the churn vs mins (day, evening, night). We can see that the churn group has higher utilization over day minutes and evening minutes. At night, they have a lower deviation, but the average is about the same. </p><p>Then, see the charge plot. It is quite aligned to what we can find in the minutes plot - higher charge in daytime and evenings, about the same average at night.</p><p>Finally, I draw a plot with the three variables I found interesting in the previous experiments.   The day charge vs churn stays the same as previous two plots. The relationship between service calls and churn is unclear in this graph, though. As for the voice mail, we can still see the pattern that the churned customers either has 0 voice mail or many voice mails above average. There’s nothing notable of the relationship between these three variables. The cross distributions are quite identical. </p>"
+        },
+		{
+            "image": "",
+            "text": "<h3>T-test</h3><pre>Welch Two Sample t-test<br><br>data:  day.mins by churn<br>t = -9.6846, df = 571.513, p-value < 2.2e-16<br>alternative hypothesis: true difference in means is not equal to 0<br>95 percent confidence interval:<br> -38.17516 -25.30148<br>sample estimates:<br> mean in group No mean in group Yes <br>         175.1758          206.9141<br><br>Welch Two Sample t-test<br><br>data:  svc.calls by churn<br>t = -8.9551, df = 548.174, p-value < 2.2e-16<br>alternative hypothesis: true difference in means is not equal to 0<br>95 percent confidence interval<br> -0.9510789 -0.6088993<br>sample estimates:<br> mean in group No mean in group Yes <br>         1.449825          2.229814 </pre><p>See the output of t-test command above. It shows the difference of the means of two groups. The p-value is in fact very small (<<0.05), which is a strong evidence against the null hypothesis. So we can say these two variables (churn vs day.mins) aren’t independent with a confidence interval of 95%. </p><p>Out of curiosity, I performed t-test on the other important variable - svc.calls. See results on the left. The difference percentage on the mean is actually higher. Also, it has a low p-value. Therefore, svc.calls is another variable that is not independent against churn rate. </p>"
+        },
+		{
+            "image": "",
+            "text": "<h3>Categorical variables and Chi-square Test</h3><table><thead><tr><th>churn / vmail</th><th>No</th><th>Yes</th></tr></thead><tbody><tr><td>No</td><td>70.46%</td><td>29.54%</td></tr><tr><td>Yes</td><td>83.44%</td><td>16.56%</td></tr></tbody></table><p>See the relationship of churn vs vmail in table as above. We can obviously see a much higher churn rate over the no vmail group, and of course the non-churn group has a higher rate of yes vmail. Despite the difference, the overall vmail rate are low for all groups. This could be a key to decrease the churn rate in the future. </p><p>The Chi-Spuare test result is shown below. We can see this p-value is also very small (<<0.05), but slightly higher than the previous one. So churn vs vmail is also not independent. </p><pre>a chisquare test type <br><br>Pearson's Chi-squared test with Yates' continuity correction<br><br>data:  table(churn, vmail)<br>X-squared = 34.1317, df = 1, p-value = 5.151e-09</pre>"
+		},
+		{
+            "image": "",
+            "text": "<h2>Random Forests</h2><h3>Fitting the Model</h3><pre> <br>Call:<br> randomForest(formula = churn ~ ., data = data[3:17], ntree = 1000, importance = TRUE, proximity = TRUE) <br>               Type of random forest: classification<br>                     Number of trees: 1000<br>No. of variables tried at each split: 3<br><br>        OOB estimate of  error rate: 7.35%<br>Confusion matrix:<br>      No Yes class.error<br>No  2828  22 0.007719298<br>Yes  223 260 0.461697723<br> </pre><p>The output of random forest see above. Again, we can see in this dataset, compared to the previous decision tree experiments, the yes prediction has a much higher error rate than the no predictions. I think it’s because the overall no rate is higher than yes, so the model predictions are leaning towards negative. </p>"
+		},
+		{
+            "image": "images/randomForestCl/05.png",
+            "text": "<h3>Variable Importance</h3><p>See the average plots below. In the data section, I analyzed service calls, day charge, and voice mail usage. The number of service calls turned out to be the no.1 important variable in mean decrease accuracy, followed by day charge. It is also the 3rd in Mean Decrease Gini. Although svc.calls contributes quite a lot to classification, the data purity is not ideal. Day charge and day minutes top the mean decrease gini. So they have a high data purity. Voice mail variables are in the middle of Mean Decrease Accuracy, and quite low in Mean Decrease Gini. So voice mail is a low purity variable. The model also takes evening charge and minutes as quite important variables. They are in the top five of both measurements. </p>"
+		},
+		{
+            "image": "images/randomForestCl/06.png",
+            "text": "<h3>Partial Dependence</h3><p>See below the side-by-side partial dependence importance plots. In fact, both plots are identical to each other as well as the average importance. So the analysis won’t be different from the previous section.</p>"
+		},
+		{
+            "image": "images/randomForestCl/07.png",
+            "text": "<h3>Margin plots</h3><p>Below are the margin plots from the random forest command provided. The histogram shows for about 2000 records the forest has high confidence. We can see from the box plot in the middle that this model is much more confident in the no predictions. The yes predictions has a low margin, averaged at around 0 with some negative values. The margin curve shows the same insight that churn predictions are not confident as the not churn. </p>"
+		},
+		{
+            "image": "images/randomForestCl/08.png",
+            "text": "<h3>The error rate over the trees</h3><p>The error rate over the trees graph below shows the error rate decreases sharply when the number of trees is less than 100. After that, the error rates are static as the number of trees grow. This rule applies to the class error rate for both yes (green dotted line) and no (red dashed line), as well as the Out-of-Bag error (black solid line).</p>"
+		},
+		{
+            "image": "images/randomForestCl/09.png",
+            "text": "<h3>The multidimensional scaling plot</h3><p>Below is MDS plot from the provided commands. The blue dots are yes, and red are no. The blue dots concentrate in the small area on the left of the graph, and also scatter almost everywhere else, which is perhaps why the margin for yes are so low. We can also see in the area where blue dots concentrate the red dots are dense too. So among the similar parameters of churn customers, we have lots of people didn’t leave.</p>"
+		},
+		{
+            "image": "images/randomForestCl/10.png",
+            "text": "<h3>ROC</h3><p>I draw a ROC curve for the sample random forest, see below. The predictions performs well overall. The yes prediction doesn’t work as good as the no predictions, though, as we can see on the left side, the curve is not aligned to the edge. </p>"
+		},
+		{
+            "image": "images/randomForestCl/11.png",
+            "text": "<h2>Influence of Parameterization</h2><h3>The Number of Trees</h3><p>I ran the randomForest function with 10, 50, 100, 200, 500, 1000, 2000, 5000 trees, respectively, and measure the running time for each command. I check the out-of-bag error rate for each forest and produce the graphs below.</p>"
+		},
+		{
+            "image": "",
+            "text": "<p>The first graph shows OOB error rates over the different forest with different number of trees. From 10 trees to 50 trees, it is a drastic drop. Also, a slight decline occurs from 100 to 200. But after that, the error rate stays almost static. </p><p>The second graph plots number of trees on x-axis while the training time in seconds for each forest on y-axis. We can observe the increase on training time is likely a linear increase as the number of tree increases. Compare the times from 100 to 200, 500 to 1000, 1000 to 2000. On each leap, the training time almost doubles as the number of trees doubles.</p><p>If we look at these two graph, I’d say 200 trees for this dataset would be a good choice. </p>"
+		},
+		{
+            "image": "images/randomForestCl/12.png",
+            "text": "<h3>Subset Ratio</h3><p>I choose to experiment on “sampsize” with subset ratio from 10% to 100% with a 10% interval. The plots below show the Out-of-Bag error rate as well as the training time. </p><p>The sampsize parameter defines how much sample data to use to train each tree. The first graph shows the error rate drops from 10% to 30%, and after that, the error rate stays steady. </p><p>The second training time graph we can observe a decline as the sample size increases. I think it’s probably because when the sample size is large, they take less time to extract samples out of the dataset. </p>"
+		},
+		{
+            "image": "images/randomForestCl/13.png",
+            "text": "<h2>Feature Selection</h2><p>The total number of attributes in dataset is 15. Here I experimented 2 approaches: one is to pick the top 5 important attributes and build a forest; the other is to discard the least important 5 attributes. The first approach gives 5 attributes, and the second gives 10. I compared the results with the forest that has 15 attributes, and plotted the results.</p>"
+		},
+		{
+            "image": "",
+            "text": "<p>The first plot is OOB error rate with three different approaches. Surprisingly, picking the top 5 important attributes will rise the error rate, in our case it is almost 10%.  However, the second approach out performed the other two. I think it maybe because 5 parameters is not enough to generate classifier. 10 parameters is not too small, and also not noisy. It doesn’t contain the irrelevant variables on the bottom of the MeanDecreaseAccuracy list previously. </p><p>The second plot illustrates the training time increases linearly as the number of attributes increases, which is quite expected. </p>"
+		}
+       
+    ]
+}
+
+

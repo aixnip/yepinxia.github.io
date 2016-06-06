@@ -71,7 +71,7 @@
 	small { font-size: 80%; }
 	
 	table thead{font-weight: 700;}
-	code{font-family:'Consolas','Courier New', mono-type;}
+	code, pre{font-family:'Consolas','Courier New', mono-type;}
 
 /* #Links
 ================================================== */
@@ -144,7 +144,7 @@ body {margin: 0 auto;}
 .work-icon span {position: relative; top: 10px; }
 .work-icon img {width:120px !important; display: block; margin: 0 auto;}
 
-#work-p-slides img{max-height:500px; width:auto; }
+#work-p-slides img{max-height:500px; width:auto; max-width: 100%; }
 #work-p-slides {padding: 40px 0 0 40px;}
 #work-p-slides li {min-height: 200px; display: block; clear: both;}
 #work-p-slides li ul li {min-height: 0; }

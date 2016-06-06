@@ -1,6 +1,13 @@
 {
     "projects": [
         {
+            "name": "Random Forest Classifier",
+            "tag": "Data Mining, R",
+            "time": "2016",
+            "image": "images/projects/randomForestCl.png",
+            "url": "random-forest-classifier.html"
+        },
+        {
             "name": "Tera-sort on AWS",
             "tag": "Spark, Hadoop, Java, Scala, AWS",
             "time": "2016",
